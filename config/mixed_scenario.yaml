@@ -1,0 +1,48 @@
+scenario: naval_operational_load
+target_host: http://localhost:8000
+environment: load_test
+header_prefix: X-Test-
+
+applications:
+  - name: chatbot
+    percentage: 40
+    workload:
+      input_tokens:
+        min: 100
+        max: 2000
+      output_tokens:
+        min: 100
+        max: 1000
+
+  - name: rag
+    percentage: 25
+    workload:
+      input_tokens:
+        min: 200
+        max: 1500
+      output_tokens:
+        min: 100
+        max: 800
+      top_k: 5
+
+  - name: image_generation
+    percentage: 15
+    workload:
+      resolution: "1024x1024"
+      prompt_complexity: medium
+      steps: 30
+
+  - name: ppt_generation
+    percentage: 10
+    workload:
+      slides:
+        min: 5
+        max: 20
+
+  - name: document_generation
+    percentage: 10
+    workload:
+      pages:
+        min: 2
+        max: 15
+      format: pdf

@@ -1,0 +1,13 @@
+profile: peak
+application: chatbot
+users: 100
+spawn_rate: 10
+duration: 300
+
+workload:
+  input_tokens:
+    min: 200
+    max: 2000
+  output_tokens:
+    min: 100
+    max: 1000

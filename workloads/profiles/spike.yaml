@@ -1,0 +1,21 @@
+profile: spike
+application: chatbot
+users: 300
+spawn_rate: 100
+duration: 180
+
+stages:
+  - duration: 30
+    users: 10
+  - duration: 60
+    users: 300
+  - duration: 120
+    users: 20
+
+workload:
+  input_tokens:
+    min: 100
+    max: 1000
+  output_tokens:
+    min: 50
+    max: 500

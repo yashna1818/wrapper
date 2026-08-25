@@ -1,0 +1,13 @@
+profile: endurance
+application: chatbot
+users: 50
+spawn_rate: 5
+duration: 3600
+
+workload:
+  input_tokens:
+    min: 200
+    max: 1500
+  output_tokens:
+    min: 100
+    max: 800

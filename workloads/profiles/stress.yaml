@@ -1,0 +1,21 @@
+profile: stress
+application: chatbot
+users: 500
+spawn_rate: 25
+duration: 600
+
+stages:
+  - duration: 60
+    users: 50
+  - duration: 180
+    users: 200
+  - duration: 360
+    users: 500
+
+workload:
+  input_tokens:
+    min: 500
+    max: 3000
+  output_tokens:
+    min: 200
+    max: 1500

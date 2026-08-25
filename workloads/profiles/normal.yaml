@@ -1,0 +1,14 @@
+profile: normal
+application: chatbot
+users: 20
+spawn_rate: 2
+duration: 120
+
+workload:
+  input_tokens:
+    min: 100
+    max: 1000
+  output_tokens:
+    min: 50
+    max: 400
+  model: gpt-4o
